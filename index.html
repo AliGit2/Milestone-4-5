@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editable Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <header>
+      <h1>Editable Resume Builder</h1>
+      <p class="instruction">Fill out your form below to generate your resume.</p>
+    </header>
+
+    <section id="resume-section" class="form-section">
+      <form id="resumeForm" class="resume-form">
+        <!-- Personal Information -->
+        <div class="input-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" placeholder="Your Name">
+        </div>
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="example@mail.com">
+        </div>
+        <div class="input-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" placeholder="123-456-7890">
+        </div>
+
+        <!-- Education -->
+        <div class="input-group">
+          <label for="education">Degree:</label>
+          <input type="text" id="education" placeholder="Bachelor's in Computer Science">
+        </div>
+        <div class="input-group">
+          <label for="institution">Institution:</label>
+          <input type="text" id="institution" placeholder="University Name">
+        </div>
+
+        <!-- Work Experience -->
+        <div class="input-group">
+          <label for="workExperience">Job Title:</label>
+          <input type="text" id="workExperience" placeholder="Software Developer">
+        </div>
+        <div class="input-group">
+          <label for="company">Company:</label>
+          <input type="text" id="company" placeholder="Company Name">
+        </div>
+        <div class="input-group">
+          <label for="years">Years of Experience:</label>
+          <input type="number" id="years" placeholder="2">
+        </div>
+
+        <!-- Skills -->
+        <div class="input-group">
+          <label for="skills">Skills (comma-separated):</label>
+          <input type="text" id="skills" placeholder="JavaScript, TypeScript, React">
+        </div>
+
+        <button type="submit" class="submit-button">Generate Resume</button>
+      </form>
+    </section>
+
+    <section id="resumeDisplay" class="resume-display" style="display: none;">
+      <h2>Your Generated Resume</h2>
+      <div class="resume-content">
+        <p><strong>Name:</strong> <span id="displayName" contenteditable="true"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail" contenteditable="true"></span></p>
+        <p><strong>Phone:</strong> <span id="displayPhone" contenteditable="true"></span></p>
+        <h3>Education</h3>
+        <p><strong>Degree:</strong> <span id="displayEducation" contenteditable="true"></span></p>
+        <p><strong>Institution:</strong> <span id="displayInstitution" contenteditable="true"></span></p>
+        <h3>Work Experience</h3>
+        <p><strong>Job Title:</strong> <span id="displayWorkExperience" contenteditable="true"></span></p>
+        <p><strong>Company:</strong> <span id="displayCompany" contenteditable="true"></span></p>
+        <p><strong>Years of Experience:</strong> <span id="displayYears" contenteditable="true"></span></p>
+        <h3>Skills</h3>
+        <p><strong>Skills:</strong> <span id="displaySkills" contenteditable="true"></span></p>
+      </div>
+    </section>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
